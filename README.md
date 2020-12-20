@@ -1,2 +1,4 @@
 # azure-dev-environment
-My own azure work environment
+
+Provisions a development environment inside an azure public cloud virtual machine.
+

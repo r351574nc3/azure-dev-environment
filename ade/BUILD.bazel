@@ -1,0 +1,27 @@
+load("@rules_python//python:defs.bzl", "py_binary")
+
+filegroup(
+    name = "all_files",
+    testonly = True,
+    srcs = glob(["**"]) + [
+        "//canary/private:all_files",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+filegroup(
+    name = "all_rules",
+    srcs = glob(["*.bzl"]) + [
+        "//canary/private:all_rules",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+py_binary(
+    name = "deploy",
+    srcs = ["deploy.py"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//azure_dev_environment:library"
+    ]
+)
