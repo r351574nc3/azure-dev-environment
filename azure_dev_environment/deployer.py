@@ -11,7 +11,7 @@ from types import SimpleNamespace
 
 
 class Deployer(object):
-    """Initialize the deployer class with subscription and resource group to deploy a logic app
+    """Initialize the deployer class with subscription and resource group to deploy a development environment
 
     :raises KeyError: If AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, or AZURE_TENANT env variables are not defined
     """
